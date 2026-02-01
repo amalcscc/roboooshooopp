@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Robo Shop{% endblock %} | Electronic Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark robo-navbar" id="mainNav">
         <div class="container">
             <a class="navbar-brand fw-bold" href="{% url 'shop:home' %}">🤖 Robo Shop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
@@ -56,8 +58,8 @@
     <main class="container py-4">
         {% block content %}{% endblock %}
     </main>
-    <footer class="bg-dark text-light text-center py-3 mt-5">
-        <p class="mb-0">&copy; Robo Shop - Arduino, Raspberry Pi, Sensors & Motors</p>
+    <footer class="robo-footer text-center">
+        <p class="mb-0">&copy; Robo Shop — Arduino, Raspberry Pi, Sensors &amp; Motors</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
